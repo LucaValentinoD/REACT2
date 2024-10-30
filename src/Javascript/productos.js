@@ -36,3 +36,4 @@ const productosRiver = [
     imagen: "https://www.digitalsport.com.ar/files/products/63cac72bd4004-574762-500x500.jpg",
   },
 ];
+export default productosRiver;

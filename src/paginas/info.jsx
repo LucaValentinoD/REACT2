@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from'../navbar.jsx'
-function info() {
+function Info() {
   return (
     <>
       <Navbar/>
@@ -9,4 +9,4 @@ function info() {
   )
 }
 
-export default info
+export default Info

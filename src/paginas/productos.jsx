@@ -1,21 +1,19 @@
 import React from 'react'
 import Navbar from'../navbar.jsx'
 import productosRiver from "../Javascript/productos.js"
-function futctos() {
+import Producto from "./Producto.jsx"
+import './productos.css'
+function productos() {
   return (
-    <>
-      <Navbar/>
-      <div>
+    <div className='fondo'>
+    <Navbar/>
+      <div className='producto'>
         {productosRiver.map(prod=>(
-          <Prodcuto key={prod.id} {...prod}/>
-        ))
-        
-        
-        
-        }
+          <Producto key={prod.id} {...prod}/>
+        ))}
       </div>
-    </>
+    </div>
   )
 }
 
-export default futctos
+export default productos
