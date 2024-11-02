@@ -19,9 +19,9 @@ export default function Navbar() {
               FUTBOL
             </a>
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item custom-dropdown-item" to="/productos">Hombre</Link></li>
-              <li><Link className="dropdown-item custom-dropdown-item" to="/productos">Mujer</Link></li>
-              <li><Link className="dropdown-item custom-dropdown-item" to="/productos">Calzados</Link></li>
+              <li><Link className="dropdown-item custom-dropdown-item" to="/category/hombre">Hombre</Link></li>
+              <li><Link className="dropdown-item custom-dropdown-item" to="/category/mujer">Mujer</Link></li>
+              <li><Link className="dropdown-item custom-dropdown-item" to="/category/calzado">Calzados</Link></li>
             </ul>
           </li>
           <div className="deco">|</div>
@@ -30,7 +30,6 @@ export default function Navbar() {
           <Link to="/contacto" className="links">CONTACTO</Link>
         </nav>
       </header>
-      <Outlet />
     </>
   );
 }

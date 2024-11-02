@@ -3,7 +3,6 @@ import Navbar from'../navbar.jsx'
 function Info() {
   return (
     <>
-      <Navbar/>
       <h1>4 A 3 PARA RIIVVVVEEEER GALLARDO ULTRA HISTORICOOOOOO</h1>
     </>
   )

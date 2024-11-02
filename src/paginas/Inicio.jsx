@@ -4,7 +4,6 @@ import Navbar from'../navbar.jsx'
 function Inicio() {
   return (
     <>
-    <Navbar/>
     </>
   )
 }
