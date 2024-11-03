@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productosRiver from "../Javascript/productos.js";
-import Producto from "./Producto.jsx";
+import Item from "./item.jsx";
 import "./productos.css";
 
 function Category() {
@@ -26,7 +26,7 @@ function Category() {
         <div className="producto">
           {productosFiltrados.length > 0 ? (
             productosFiltrados.map((prod) => (
-              <Producto key={prod.id} {...prod} />
+              <Item key={prod.id} {...prod} />
             ))
           ) : (
             <h2>No hay productos en esta categoría</h2>

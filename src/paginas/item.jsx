@@ -2,7 +2,7 @@ import React from 'react';
 import './productos.css';
 import { Link } from 'react-router-dom';
 
-function producto({nombre, precio, id, imagen}) {
+function item({nombre, precio, id, imagen}) {
   return (
     <Link className='cuadradito' to={`/detail/${id}`}>
       <div className='name'>{nombre}</div>
@@ -12,4 +12,4 @@ function producto({nombre, precio, id, imagen}) {
   );
 }
 
-export default producto
+export default item

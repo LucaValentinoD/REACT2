@@ -48,7 +48,7 @@ img {
     color: #000000;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 25;
     white-space: pre-line;
 }
 .name{
@@ -61,9 +61,9 @@ img {
 .precio{
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 125;
     white-space: pre-line;
-    color: #000000;
+    color: #4B3F40;
 }
 .jose{
     display: flex;
