@@ -4,6 +4,7 @@
 }
 body{
     max-width: 1920px;
+    font-family: 'Nunito', sans-serif;
 }
 img {
     object-fit: cover;
@@ -24,6 +25,7 @@ img {
 
 .bodyprod{
     height: 100%;
+    font-family: 'Nunito', sans-serif;
 }
 
 .cuadradito {
@@ -84,6 +86,7 @@ img {
     border-radius: 10px;
     gap: 50px;
     text-decoration: none;
+    font-family: 'Nunito', sans-serif;
 }
 .producto img {
     object-fit: cover;

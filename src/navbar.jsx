@@ -9,7 +9,9 @@ export default function Navbar() {
       <header>
         <div className='nav1'>Envíos a todo el mundo | 3 cuotas sin interés a partir de $50.000</div>
         <nav className='nav'>
-          <img src='.\src\assets\logo.png' className='logo'/>
+        <Link to="/">
+        <img src='.\src\assets\logo.png' alt="Logo" className='logo' />
+        </Link>
           <Search/>
           <div className="deco">|</div>
           <Link className="links" to="/">INICIO</Link>
@@ -21,7 +23,7 @@ export default function Navbar() {
             <ul className="dropdown-menu">
               <li><Link className="dropdown-item custom-dropdown-item" to="/category/hombre">Hombre</Link></li>
               <li><Link className="dropdown-item custom-dropdown-item" to="/category/mujer">Mujer</Link></li>
-              <li><Link className="dropdown-item custom-dropdown-item" to="/category/calzado">Calzados</Link></li>
+              <li><Link className="dropdown-item custom-dropdown-item" to="/category/calzados">Calzados</Link></li>
             </ul>
           </li>
           <div className="deco">|</div>
