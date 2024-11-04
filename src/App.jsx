@@ -1,34 +1,33 @@
-import { useState } from 'react';
-import './App.css';
-import{ BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./paginas/Inicio.jsx";
-import './paginas/Inicio.jsx';
 import Contacto from './paginas/contacto.jsx';
 import Category from './paginas/itemListContainer.jsx';
 import Info from './paginas/info.jsx';
 import Nopage from './paginas/nopage.jsx';
-import Navbar from './navbar.jsx';
-import Detadelprod from './paginas/itemDetailContainer.jsx';
+import DetalleProd from './paginas/itemDetailContainer.jsx';
+import Navbar from "./navbar.jsx";
+import Carrito from "./paginas/carrito.jsx";
+import CartProvider from "./Context/cartContext.jsx";
+import './App.css';
+import Logo from './assets/logo.png';
+
 function App() {
-
   return (
-    <>
-    <BrowserRouter>
-    <Navbar/>
-      <Routes>
-      <Route path="/" element={<Inicio />}/>
-        <Route path="contacto" element={<Contacto/>}/>
-        <Route path="/category/:category" element={<Category/>}/>
-        <Route path="info" element={<Info/>}/>
-        <Route path="/detail/:id" element={<Detadelprod/>}/>
-        <Route path="*" element={<Nopage />} />
-      </Routes>
-    </BrowserRouter>
-
-
-
-    </>
-  )
+    <CartProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/Inicio" element={<Inicio />} />
+          <Route path="contacto" element={<Contacto />} />
+          <Route path="/category/:category" element={<Category />} />
+          <Route path="info" element={<Info />} />
+          <Route path="/detail/:id" element={<DetalleProd />} />
+          <Route path="/Carrito" element={<Carrito />} />
+          <Route path="*" element={<Nopage />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;

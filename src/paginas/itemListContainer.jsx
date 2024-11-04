@@ -3,22 +3,38 @@ import { useParams } from "react-router-dom";
 import productosRiver from "../Javascript/productos.js";
 import Item from "./item.jsx";
 import "./productos.css";
-
 function Category() {
-  const { category } = useParams(); // Mantener el nombre 'categoria'
-  const [productosFiltrados, setProductosFiltrados] = useState([]);
+const { category } = useParams(); // Mantener el nombre 'categoria'
+const [productosFiltrados, setProductosFiltrados] = useState([]);
+const [error, setError] = useState(null); 
 
-  useEffect(() => {
-    console.log('Categoría seleccionada:', category); // Imprimir la categoría seleccionada
-    
-    const filtrados = productosRiver.filter(prod => 
-      prod.category.toLowerCase() === category.toLowerCase() // Filtrar usando 'categoria'
-    );
+useEffect(() => {
+  console.log('Categoría seleccionada:', category);
 
-    console.log('Productos disponibles:', productosRiver);
-    console.log('Productos filtrados:', filtrados);
-    setProductosFiltrados(filtrados);
-  }, [category]);
+  const fetchProductos = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(productosRiver);
+      }, 1000);
+    });
+  };
+
+  fetchProductos()
+    .then((productos) => {
+      const filtrados = productos.filter(prod => 
+        prod.category.toLowerCase() === category.toLowerCase()
+      );
+
+      console.log('Productos disponibles:', productos);
+      console.log('Productos filtrados:', filtrados);
+      setProductosFiltrados(filtrados);
+    })
+    .catch((err) => {
+      console.error(err);
+      setError(err);
+    });
+}, [category]);
+
 
   return (
     <div className="bodyprod">

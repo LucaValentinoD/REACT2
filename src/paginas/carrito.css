@@ -1,0 +1,33 @@
+.boddy{
+    padding-top: 89px;
+}
+
+.container2{
+    border: 1px solid #000000;
+    height: 690px;
+    width: 1900px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    justify-content: center;
+
+    .logo{
+            position: relative;
+            width: 125px;
+            height: 125px;
+            top: 120px;
+            left: 40px;
+            margin-left: 10px;
+            margin-right: 20px;
+            max-width: 100%; 
+            box-sizing: content-box;
+    }
+
+    .vacio{
+        color: grey;
+        position: relative;
+        left: 45px;
+        top: 100px;
+
+    }
+}
