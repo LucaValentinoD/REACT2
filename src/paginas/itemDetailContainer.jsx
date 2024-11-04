@@ -16,7 +16,7 @@ function DetalleProd() {
     const [cantidad, setCantidad] = useState(1);
 
     const agregarAlCarrito = () => {
-        console.log(`Cantidad seleccionada: ${cantidad}`); // Log de la cantidad seleccionada
+        console.log(`Cantidad seleccionada: ${cantidad}`);
         if (cantidad > producto.stock) {
             console.log(`No hay suficiente stock. Solo hay ${producto.stock} unidades disponibles.`);
             return;
@@ -28,7 +28,7 @@ function DetalleProd() {
     const eliminarDelCarrito = () => {
         const itemInCart = cart.find(prod => prod.id === producto.id);
         if (itemInCart) {
-            console.log(`Eliminando 1 de ${itemInCart.nombre} del carrito.`); // Log de eliminación
+            console.log(`Eliminando 1 de ${itemInCart.nombre} del carrito.`); 
             removeCart(producto.id);
         } else {
             alert('El producto no está en el carrito.');
@@ -50,7 +50,7 @@ function DetalleProd() {
                 onChange={(e) => {
                     const newCantidad = Math.max(1, Math.min(producto.stock, Number(e.target.value))); // Limita la cantidad
                     setCantidad(newCantidad);
-                }} // Actualiza el estado de cantidad
+                }}
             />
             <button onClick={agregarAlCarrito}>Añadir</button>
             <button onClick={eliminarDelCarrito}>Eliminar del Carrito</button>

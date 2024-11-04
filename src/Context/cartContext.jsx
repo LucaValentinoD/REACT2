@@ -6,7 +6,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-    const addCart = (nombre, precio, cantidad, id) => {
+    const addCart = (nombre, precio, cantidad, id, imagen ) => {
         setCart(prevCart => {
             const yaexiste = prevCart.find(prod => prod.id === id);
             if (yaexiste) {
@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
                 const stockDisponible = productosRiver.find(prod => prod.id === id).stock;
 
                 if (cantidad <= stockDisponible) {
-                    return [...prevCart, { nombre, precio, cantidad, id }];
+                    return [...prevCart, { nombre, precio, cantidad, id, imagen }];
                 } else {
                     console.log(`No se puede añadir más de ${stockDisponible} unidades.`);
                     return prevCart;
@@ -68,7 +68,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const handleAddToCart = (prod, cantidad) => {
-        addCart(prod.nombre, prod.precio, cantidad, prod.id);
+        addCart(prod.nombre, prod.precio, cantidad, prod.id, prod.imagen);
     };
 
     return (
