@@ -40,7 +40,7 @@ function DetalleProd() {
         <div className='cuadradito2'>
             <h1>Detalles del Producto</h1>
             <h2 className='name'>{producto.nombre}</h2>
-            <img src={producto.imagen} alt={producto.nombre} />
+            <img className="imgg" src={producto.imagen} alt={producto.nombre} />
             <p className='descri'>{producto.descripcion}</p>
             <h3 className='precio'>${producto.precio}</h3>
             <input 
