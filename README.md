@@ -6,4 +6,4 @@
   <li>React</li>
   <li>JavaScript</li>
   y subido a Vercel: 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Far.pinterest.com%2Fvalenellemberger14%2Fgallinas%2F&psig=AOvVaw3DrTRS9uZHfhrT1Pt8C9xA&ust=1732071346349000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjtgdyy54kDFQAAAAAdAAAAABAE"/>
+<img src="https://i.pinimg.com/originals/19/75/19/197519a8cf661b6ab1fa58f575a39f10.jpg"/>
