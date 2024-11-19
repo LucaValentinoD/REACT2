@@ -37,25 +37,32 @@ function DetalleProd() {
     };
 
     return (
-        <div className='cuadradito2'>
-            <h1>Detalles del Producto</h1>
-            <h2 className='name'>{producto.nombre}</h2>
-            <img className="imgg" src={producto.imagen} alt={producto.nombre} />
-            <p className='descri'>{producto.descripcion}</p>
-            <h3 className='precio'>${producto.precio}</h3>
-            <input 
-                type="number" 
-                min="1" 
-                max={producto.stock} 
-                value={cantidad} 
-                onChange={(e) => {
-                    const newCantidad = Math.max(1, Math.min(producto.stock, Number(e.target.value))); // Limita la cantidad
-                    setCantidad(newCantidad);
-                }}
-            />
-            <button onClick={agregarAlCarrito}>Añadir</button>
-            <button onClick={eliminarDelCarrito}>Eliminar del Carrito</button>
+<div className='cuadradito2'>
+    <div>
+        <h1>Detalles del Producto</h1>
+        <h2 className='name'>{producto.nombre}</h2>
+        <img className="imgg" src={producto.imagen} alt={producto.nombre} />
+    </div>
+    <div className="right-side">
+        <p className='descri'>{producto.descripcion}</p>
+        <h3 className='precio'>${producto.precio}</h3>
+        <input 
+            type="number" 
+            min="1" 
+            max={producto.stock} 
+            value={cantidad} 
+            onChange={(e) => {
+                const newCantidad = Math.max(1, Math.min(producto.stock, Number(e.target.value)));
+                setCantidad(newCantidad);
+            }}
+        />
+        <div className='botones'>
+            <button className="añadir" onClick={agregarAlCarrito}>Añadir</button>
+            <button className="eliminar" onClick={eliminarDelCarrito}>Eliminar del Carrito</button>
         </div>
+    </div>
+</div>
+
     );
 }
 
