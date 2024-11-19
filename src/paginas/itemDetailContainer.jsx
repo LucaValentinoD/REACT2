@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import productosRiver from '../Javascript/productos';
+import { ProductContext } from '../Context/productos';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../Context/cartContext';
 import './productos.css';
 
 function DetalleProd() {
     const { id } = useParams();
-    const producto = productosRiver.find(prod => prod.id === id);
+    const productos = useContext(ProductContext);
+    const producto = productos.find(prod => prod.id === id);
 
     if (!producto) {
         return <h2>El producto no existe!</h2>;
@@ -28,7 +29,7 @@ function DetalleProd() {
     const eliminarDelCarrito = () => {
         const itemInCart = cart.find(prod => prod.id === producto.id);
         if (itemInCart) {
-            console.log(`Eliminando 1 de ${itemInCart.nombre} del carrito.`); 
+            console.log(`Eliminando 1 de ${itemInCart.nombre} del carrito.`);
             removeCart(producto.id);
         } else {
             alert('El producto no está en el carrito.');

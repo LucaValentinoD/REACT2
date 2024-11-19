@@ -9,12 +9,12 @@ export default function Navbar() {
       <header>
         <div className='nav1'>Envíos a todo el mundo | 3 cuotas sin interés a partir de $50.000</div>
         <nav className='nav'>
-        <Link to="/Inicio">
+        <Link to="/Inicio/Todo">
         <img src='.\src\assets\logo.png' alt="Logo" className='logo' />
         </Link>
           <Search/>
           <div className="deco">|</div>
-          <Link className="links" to="/Inicio">INICIO</Link>
+          <Link className="links" to="/Inicio/Todo">INICIO</Link>
           <div className="deco">|</div>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
